@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    username: root
+    password: 123123
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jackson:
+    serialization:
+      indent_output: true
+
+app:
+  datasource:
+    ds1:
+      url: jdbc:mysql://127.0.0.1:3306/test1
+      username: root
+      password: 123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    ds2:
+      url: jdbc:mysql://127.0.0.1:3306/test2
+      username: root
+      password: 123
+      driver-class-name: com.mysql.cj.jdbc.Driver
