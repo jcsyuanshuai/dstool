@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CdssExtractorApplication {
+public class DSToolApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CdssExtractorApplication.class, args);
+        SpringApplication.run(DSToolApplication.class, args);
     }
 
 }
