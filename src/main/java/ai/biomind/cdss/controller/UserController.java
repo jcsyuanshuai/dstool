@@ -1,6 +1,4 @@
 package ai.biomind.cdss.controller;
-
-import ai.biomind.cdss.anno.CatRequest;
 import ai.biomind.cdss.domain.User;
 import ai.biomind.cdss.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,21 +21,18 @@ public class UserController {
     UserRepository userRepository;
 
     @RequestMapping("/user/add")
-    @CatRequest
     public User addUser(@RequestParam(name = "name") String name,
                         @RequestParam(name = "pass") String pass) {
         return userRepository.save(new User(null, name, pass));
     }
 
     @RequestMapping("/user/{id}")
-    @CatRequest
     public User getUser(@PathVariable(name = "id") Long id) {
         System.out.println(id);
         return userRepository.getOne(id);
     }
 
     @RequestMapping("/user")
-    @CatRequest
     public List<User> findAll() {
         return userRepository.findAll();
     }
