@@ -25,4 +25,4 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Build the Docker image
-        run: docker build -t  dstool:$(date_+%s) .
+        run: docker build . --file Dockerfile --tag dstool:$(date_+%s)
